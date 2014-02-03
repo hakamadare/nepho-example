@@ -1,13 +1,14 @@
 --- # vagrant-single-host
-summary: A single local Vagrant CentOS 6 box
+summary: A single local Vagrant Ubuntu 12.04 box
 description: >
-  This simple example creates a single local CentOS 6 box with bootstraps
-  Puppet, and performs a few minor configuration actions.
+  This simple example creates a single local Ubuntu 12.04 box, bootstraps
+  Puppet, and deploys a standalone CAS instance.
 provider: vagrant
 parameters:
-  EpelMirror: "http://download.fedoraproject.org/pub/epel"
   UpdatePackages: False
   SetupPuppet: True
   PuppetBootstrap: "http://raw.github.com/hashicorp/puppet-bootstrap/master"
-  BoxName: CentOS-6.4-x86_64
-  BoxUrl: "http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-i386-v20130731.box"
+  BoxName: "ubuntu-server-12042-x86_64"
+  BoxUrl: "http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-12042-x64-vbox4210.box"
+  BoxUrlFusion: "http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-12042-x64-fusion4210.box"
+  VagrantBackend: "virtualbox"
